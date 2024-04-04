@@ -186,13 +186,11 @@ if __name__ == "__main__":
     yaml_data = []
     for i, row in df.iterrows():
         yaml_data.append({
-            "id": pattern.sub('', row["Authors"]).split(" ")[1] + row["Year"] + pattern.sub('', row["Title"]).split(" ")[0],
+            "id": (pattern.sub('', row["Authors"]).split(" ")[1] + row["Year"] + pattern.sub('', row["Title"]).split(" ")[0]).lower(),
             "category": row["Category"] if row["Category"] else None,
             "title": row["Title"],
             "authors": row["Authors"],
             "year": row["Year"] if row["Year"] else None,
-            "conference/journal": row["Tag"] if row["Tag"] else None,
-            "description": row["Abstract"].split(".")[0] + "." if row["Abstract"] else None,
             "abstract": row["Abstract"] if row["Abstract"] else None,
             "project_page": row["🌐 Project Page"] if row["🌐 Project Page"] else None,
             "paper": row["📄 Paper"] if row["📄 Paper"] else None,

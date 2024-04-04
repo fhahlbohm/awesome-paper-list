@@ -9,13 +9,12 @@ def generate_markdown(entries: list[dict[str, any]]) -> None:
         if entry['code'] is not None:
             links.append(f"[💻 Code]({entry['code']})")
         if entry['video'] is not None:
-            links.append(f"[🎥 Video]({entry['video']}'>video</a>)")
+            links.append(f"[🎥 Video]({entry['video']})")
         link_string = ' | '.join(links)
         md_string = f"""
 - <a name=\"{entry['id']}\"></a>
-  **{entry['title']}**  
+  **{entry['title']}** ({entry['year']})  
   {entry['authors']}  
-  {entry['conference/journal']}, {entry['year']}  
   {link_string}  
   <details><summary>Abstract</summary>{entry['abstract']}</details>
 """

@@ -52,12 +52,9 @@ def generate_html(entries: list[dict[str, any]]) -> None:
 
         row += f"""
                     <td style="padding:20px;width:75%;vertical-align:middle">
-                        <span class="papertitle">{entry['title']}</span>
+                        <span class="papertitle">{entry['title']}</span> &mdash; {entry['year']}
                         <p style="margin:0">{entry['authors']}</p>
-                        <em>{entry['conference/journal']}, {entry['year']}</em>
-                        <br>
                         {links}
-                        <p>{entry['description']}</p>
                     </td>
                 </tr>
     """
@@ -67,18 +64,19 @@ def generate_html(entries: list[dict[str, any]]) -> None:
 <!DOCTYPE HTML>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>awesome-paper-list</title>
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<table style="width:100%;max-width:900px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+<table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 <tr style="padding:0px">
     <td style="padding:0px">
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
         <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>awesome-paper-list</h2>
+            <td style="padding:0px;width:100%;vertical-align:middle">
+                <h1>awesome-paper-list</h1>
             </td>
         </tr>
         </tbody></table>
