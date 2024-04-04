@@ -1,0 +1,1 @@
+    pip install pillow pyyaml moviepy opencv-python
