@@ -5,7 +5,7 @@ from asset_utils import compress_assets
 from generate_html import generate_html
 from generate_markdown import generate_markdown
 
-with open("raw_data.yaml") as stream:
+with open("awesome_3dgs_papers.yaml") as stream:
     try:
         entries = yaml.safe_load(stream)
     except yaml.YAMLError as e:

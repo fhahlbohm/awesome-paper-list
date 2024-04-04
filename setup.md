@@ -1,1 +1,1 @@
-    pip install pillow pyyaml moviepy opencv-python
+    pip install pillow pyyaml moviepy opencv-python requests pandas
