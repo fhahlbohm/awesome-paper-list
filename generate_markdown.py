@@ -15,7 +15,7 @@ def generate_markdown(entries: list[dict[str, any]]) -> None:
 - <a name=\"{entry['id']}\"></a>
   **{entry['title']}** &mdash; {entry['year']}  
   {entry['authors']}  
-  {link_string}  
+  {link_string}
   <details><summary>Abstract</summary>{entry['abstract']}</details>
 """
         md += md_string
